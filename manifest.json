@@ -2,12 +2,20 @@
    "manifest_version": 2,
    "name": "Roam ShowTime",
    "description": "Show block creation & edit times on RoamResearch.com.",
-   "version": "0.1",
+   "version": "1.0",
    "author": "Tomas Fiers (https://tomasfiers.net)",
-   "content_scripts": [{
-      "matches": ["https://roamresearch.com/*"],
-      "js": ["underscore-min.js", "showtime.js"]
-   }],
+   "homepage_url": "https://github.com/tfiers/RoamShowTime",
+   "content_scripts": [
+      {
+         "matches": [
+            "https://roamresearch.com/*"
+         ],
+         "js": [
+            "underscore-min.js",
+            "showtime.js"
+         ]
+      }
+   ],
    "icons": {
       "48": "img/icon_48.png",
       "128": "img/icon_128.png"
