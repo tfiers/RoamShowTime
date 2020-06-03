@@ -16,9 +16,9 @@ function showTime() {
         const createTime = extractTimeFrom(div, "data-create-time")
         const editTime = extractTimeFrom(div, "data-edit-time")
         if (createTime == editTime) {
-            div.innerHTML = createTime
+            div.textContent = createTime
         } else {
-            div.innerHTML = `${createTime}<br>${editTime}`
+            div.textContent = `${createTime}\n${editTime}`
         }
         style(div)
     })
@@ -58,5 +58,5 @@ function style(div) {
     div.style.paddingTop = "0.2em"
     div.style.paddingBottom = "0.2em"
     div.style.marginRight = "0.4em"
-    // div.style.fontFamily = "monospace"
+    div.style.whiteSpace = "pre"  // Keep linebreak in our textContent.
 }
