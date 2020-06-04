@@ -1,4 +1,4 @@
-# Roam ShowTime
+# ⏱ Roam ShowTime
 
 ![logo](img/icon_128.png)
 
@@ -16,12 +16,15 @@ What it looks like:
 - If those are the same (ignoring seconds), only one is displayed
 - For times more than 24 hours in the past, the full date is displayed.
 
-When a lot of blocks are loaded on the page, the app will start to respond 
+Note that the displayed times concern the block text only 
+(and not any descendant blocks).
+
+⏱ When a lot of blocks are loaded on the page, the app will start to respond 
 slowly. Toggling off the time display while you are interacting with blocks 
 will then help.
 
-If you use custom CSS on Roam that drastically changes the layout, this plugin might well clash with it.
-Smaller theming changes should be fine.
+🎨 If you use custom CSS on Roam that drastically changes the layout, this 
+plugin might well clash with it. Smaller theming changes should be fine.
 
 
 ### Installation
