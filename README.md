@@ -20,6 +20,9 @@ When a lot of blocks are loaded on the page, the app will start to respond
 slowly. Toggling off the time display while you are interacting with blocks 
 will then help.
 
+If you use custom CSS on Roam that drastically changes the layout, this plugin might well clash with it.
+Smaller theming changes should be fine.
+
 
 ### Installation
 
