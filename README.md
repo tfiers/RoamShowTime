@@ -25,9 +25,17 @@ will then help.
 
 [![chrome webstore badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/roam-showtime/ojcaheglgnbmphkdppihchfodgpbebhp)
 
-[Here's how to install as a Chrome developer extension](https://stackoverflow.com/a/24577660/2611913)
-when you want to install directly from this repo or from your fork of it.
-
+- Installation from the Chrome webstore auto-updates
+  (note however that there's a review delay whenever a new version is uploaded to the webstore).
+- For Firefox, download the XPI file in the `dist` directory (or on the Releases tab on GitHub).
+  Then install [as follows](https://extensionworkshop.com/documentation/publish/distribute-sideloading/#install-addon-from-file).
+  This installation will not auto update.
+  (There is no auto-updating listing on Addons.Mozilla.Org (yet): "Mozilla policy 
+  doesn't allow listings for add-ons for Roam Research because the site is limited access").
+- When you want to install directly from source, 
+  here are the instructios [for Chrome](https://stackoverflow.com/a/24577660/2611913)
+  and [for Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+  
 
 ### How it works
 
