@@ -5,7 +5,8 @@
 Browser extension to show block creation & edit times on [RoamResearch.com](https://roamresearch.com).
 
 What it looks like:
-![screenshot](img/screenshot_detail.png)
+
+<img title="screenshot" src="img/screenshot_detail.png" width="700">
 
 
 ### Instructions for use
@@ -43,5 +44,5 @@ This extension
   divs with a `data-edit-time` attribute, and if so, adds absolutely positioned
   divs to the left of each bullet, with formatted time strings taken from the 
   `data-..-time` attributes.
-- When the sidebar is open, some right-padding is added to both the main
+- When the sidebar is open, some left-padding is added to both the main
   container and the sidebar, so that the timestamps fit on screen.
