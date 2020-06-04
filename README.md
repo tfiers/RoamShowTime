@@ -1,4 +1,4 @@
-# ⏱ Roam ShowTime
+# Roam ShowTime
 
 ![logo](img/icon_128.png)
 
