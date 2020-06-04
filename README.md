@@ -22,6 +22,8 @@ Toggling off the time display while you are interacting with blocks will then he
 
 ### Installation
 
+[![chrome webstore badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/roam-showtime/ojcaheglgnbmphkdppihchfodgpbebhp)
+
 [Here's how to install as a Chrome developer extension](https://stackoverflow.com/a/24577660/2611913)
 when you want to install directly from this repo or from your fork of it.
 
