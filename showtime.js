@@ -11,42 +11,78 @@ const METADATA_DIV_QUERY = 'div[data-edit-time]'
 function updateTimeDivs() {
     // Disable listening for DOM mutations while we mutate the DOM.
     stopObservingDOM()
-    // Remove stale time divs
-    const oldTimeDivs = document.getElementsByClassName(TIME_DIV_CLASS)
-    Array.from(oldTimeDivs).forEach(div => div.remove())
-    // Only add timedivs when in C-c C-x mode, and when sidebar is closed.
+    removeOldTimeDivs()
+    resetContainerPadding()
+    const sidebarOpen = (document.querySelector("div#roam-right-sidebar-content") != null)
     const inCcCxMode = (document.querySelector(METADATA_DIV_QUERY) != null)
-    const sidebarClosed = (document.querySelector("div#roam-right-sidebar-content") == null)
-    if (inCcCxMode && sidebarClosed) {
-        const roamBlocks = document.getElementsByClassName('roam-block-container')
-        Array.from(roamBlocks).forEach(block => {
-            // Get block creation & last-edited times
-            const metaDataDiv = block.querySelector('div[data-edit-time]')
-            let createTime = extractTimeFrom(metaDataDiv, "data-create-time")
-            const editTime = extractTimeFrom(metaDataDiv, "data-edit-time")
-            // Sometimes, creation time is missing
-            if (createTime == null) {
-                createTime = editTime
-            }
-            // Make a human-readable time string
-            const timeText = makeText(createTime, editTime)
-            // Add text to a new div and style it.
-            const timeDiv = document.createElement('div')
-            timeDiv.setAttribute('class', TIME_DIV_CLASS)
-            timeDiv.textContent = timeText
-            style(timeDiv)
-            position(timeDiv)
-            // Add new div to Roam block container div.
-            block.appendChild(timeDiv)
-            // Bring collapse/expand arrows to front, above timedivs.
-            const controlsDiv = block.querySelector("div.controls")
-            controlsDiv.style.zIndex = 1
-        })
+    // Only add timedivs when in C-c C-x mode
+    if (inCcCxMode) {
+        if (sidebarOpen) {
+            // With the sidebar open, our timedivs would be cutoff. So we make
+            // some room for them.
+            setContainerPadding()
+        }
+        // Add a div to each roam block.
+        addTimeDivs()
     }
     startObservingDOM()
-    /* REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE  */ console.log("  16  ")
 }
 
+function setContainerPadding() {
+    const mainContainer = document.querySelector('div.roam-center>div')
+    if (mainContainer != null) {
+        mainContainer.style.paddingLeft = "calc((100% - 520px) / 2)"
+    }
+    const sideContainer = document.querySelector('div#roam-right-sidebar-content')
+    if (sideContainer != null) {
+        sideContainer.style.position = "relative"  // Make absolute timedivs move with scroll.
+        sideContainer.style.paddingLeft = "7em"
+    }
+}
+
+function resetContainerPadding() {
+    const mainContainer = document.querySelector('div.roam-center>div')
+    if (mainContainer != null) {
+        mainContainer.style.paddingLeft = "calc((100% - 800px) / 2)"
+    }
+    const sideContainer = document.querySelector('div#roam-right-sidebar-content')
+    if (sideContainer != null) {
+        sideContainer.style.position = "static"
+        sideContainer.style.paddingLeft = "0"
+    }
+}
+
+function addTimeDivs() {
+    const roamBlocks = document.getElementsByClassName('roam-block-container')
+    Array.from(roamBlocks).forEach(block => {
+        // Get block creation & last-edited times
+        const metaDataDiv = block.querySelector('div[data-edit-time]')
+        let createTime = extractTimeFrom(metaDataDiv, "data-create-time")
+        const editTime = extractTimeFrom(metaDataDiv, "data-edit-time")
+        // Sometimes, creation time is missing
+        if (createTime == null) {
+            createTime = editTime
+        }
+        // Make a human-readable time string
+        const timeText = makeText(createTime, editTime)
+        // Add text to a new div and style it.
+        const timeDiv = document.createElement('div')
+        timeDiv.setAttribute('class', TIME_DIV_CLASS)
+        timeDiv.textContent = timeText
+        style(timeDiv)
+        position(timeDiv)
+        // Add new div to Roam block container div.
+        block.appendChild(timeDiv)
+        // Bring collapse/expand arrows to front, above timedivs.
+        const controlsDiv = block.querySelector("div.controls")
+        controlsDiv.style.zIndex = 1
+    })
+}
+
+function removeOldTimeDivs() {
+    const oldTimeDivs = document.getElementsByClassName(TIME_DIV_CLASS)
+    Array.from(oldTimeDivs).forEach(div => div.remove())
+}
 
 function extractTimeFrom(metaDataDiv, attributeName) {
     const timestamp = metaDataDiv.getAttribute(attributeName)
