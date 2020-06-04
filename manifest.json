@@ -1,8 +1,8 @@
 {
    "manifest_version": 2,
    "name": "Roam ShowTime",
-   "description": "Show block creation & edit times on RoamResearch.com.",
-   "version": "1.0.1",
+   "description": "Show block creation & edit times on RoamResearch.com",
+   "version": "1.2",
    "author": "Tomas Fiers (https://tomasfiers.net)",
    "homepage_url": "https://github.com/tfiers/RoamShowTime",
    "content_scripts": [
