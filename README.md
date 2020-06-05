@@ -8,11 +8,13 @@ What it looks like:
 
 <img title="screenshot" src="img/screenshot_detail.png" width="700">
 
+This is useful when reviewing how much time you spent on a topic/thought/task.
+
 
 ### Instructions for use
 
 - Toggle the time display using `C-c C-x`.
-- The first time is the creation time, the second the time of last edit.
+- The first entry is the creation time, the second the time of last edit.
 - If those are the same (ignoring seconds), only one is displayed
 - For times more than 24 hours in the past, the full date is displayed.
 
