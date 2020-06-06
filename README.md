@@ -33,12 +33,12 @@ plugin might well clash with it. Smaller theming changes should be fine.
 
 [![chrome webstore badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/roam-showtime/ojcaheglgnbmphkdppihchfodgpbebhp)
 
-- Installation from the Chrome webstore auto-updates
-  (note however that there's a review delay whenever a new version is uploaded to the webstore).
+- Installation from the Chrome webstore auto-updates.
+  (Note however that there's a review delay whenever a new version is uploaded to the webstore).
 - For Firefox, download the XPI file in the `dist` directory (or on the Releases tab on GitHub).
   Then install [as follows](https://extensionworkshop.com/documentation/publish/distribute-sideloading/#install-addon-from-file).
   This installation will not auto update.
-  (There is no auto-updating listing on Addons.Mozilla.Org (yet): "Mozilla policy 
+  (There is no auto-updating entry for this plugin on Addons.Mozilla.Org (yet): "Mozilla policy 
   doesn't allow listings for add-ons for Roam Research because the site is limited access").
 - When you want to install directly from source, 
   here are the instructios [for Chrome](https://stackoverflow.com/a/24577660/2611913)
@@ -57,7 +57,8 @@ This extension
 - [throttle](https://underscorejs.org/#throttle)s these events (so that the 
   extension code does not run too often);
 - on each (throttled) DOM mutation, checks whether the document contains any 
-  divs with a `data-edit-time` attribute, and if so, adds absolutely positioned
+  divs with a `data-edit-time` attribute..
+- ..and if so, adds absolutely positioned
   divs to the left of each bullet, with formatted time strings taken from the 
   `data-..-time` attributes.
 - When the sidebar is open, some left-padding is added to both the main
