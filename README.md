@@ -13,6 +13,9 @@ This is useful when reviewing how much time you spent on a topic/thought/task.
 
 ### Instructions for use
 
+🆕 Update: Roam has changed this shoetcut/feature (it's still in beta after all).
+Follow here for updates: https://twitter.com/TomasFiers/status/1277785429954174976
+
 - Toggle the time display using `C-c C-x`.
 - The first entry is the creation time, the second the time of last edit.
 - If those are the same (ignoring seconds), only one is displayed
