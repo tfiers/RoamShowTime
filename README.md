@@ -1,8 +1,5 @@
 # Roam ShowTime
 
-🆕 Update: as of 2020 June 29th, Roam has changed or removed the feature this plugin depends on.
-Follow here for updates: https://twitter.com/TomasFiers/status/1277785429954174976
-
 ![logo](img/icon_128.png)
 
 Browser extension to show block creation & edit times on [RoamResearch.com](https://roamresearch.com).
@@ -16,7 +13,8 @@ This is useful when reviewing how much time you spent on a topic/thought/task.
 
 ### Instructions for use
 
-- Toggle the time display using `C-c C-x`.
+- Toggle the time display using `ctrl-c, ctrl-s`.
+  - Note that this shortcut changed (it used to be `ctrl-c, ctrl-x`).
 - The first entry is the creation time, the second the time of last edit.
 - If those are the same (ignoring seconds), only one is displayed
 - For times more than 24 hours in the past, the full date is displayed.
