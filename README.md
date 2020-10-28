@@ -2,7 +2,7 @@
 
 ![logo](img/icon_128.png)
 
-Browser extension to show block creation & edit times on [RoamResearch.com](https://roamresearch.com).
+Browser extension to show block creation & edit times on [Roam Research](https://roamresearch.com).
 
 What it looks like:
 
