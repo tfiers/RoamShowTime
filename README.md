@@ -1,5 +1,8 @@
 # Roam ShowTime
 
+⚠ Another Roam update broke this plugin. I have no plans to update this plugin further. PRs are welcome though.
+
+
 ![logo](img/icon_128.png)
 
 Browser extension to show block creation & edit times on [Roam Research](https://roamresearch.com).
