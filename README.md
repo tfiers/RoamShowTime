@@ -1,7 +1,9 @@
 # Roam ShowTime
 
-⚠ Another Roam update broke this plugin. I have no plans to update this plugin further. PRs are welcome though.
+- 🚀 Update 2022. A subset of this functionality is now built-in in Roam. (Hover over a bullet to see the last edited time).
+- ⚠ Update Jan 2021. Another Roam update broke this plugin. I have no plans to update this plugin further. PRs are welcome though.
 
+---
 
 ![logo](img/icon_128.png)
 
