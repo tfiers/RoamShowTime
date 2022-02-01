@@ -37,7 +37,7 @@ plugin might well clash with it. Smaller theming changes should be fine.
 
 ### Installation
 
-[![chrome webstore badge](https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/roam-showtime/ojcaheglgnbmphkdppihchfodgpbebhp)
+[![chrome webstore badge](https://storage.googleapis.com/web-dev-uploads/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png)](https://chrome.google.com/webstore/detail/roam-showtime/ojcaheglgnbmphkdppihchfodgpbebhp)
 
 - Installation from the Chrome webstore auto-updates.
   (Note however that there's a review delay whenever a new version is uploaded to the webstore).
